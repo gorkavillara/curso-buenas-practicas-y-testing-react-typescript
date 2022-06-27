@@ -1,24 +1,32 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import React, { useState } from "react";
+import "./App.css";
+import ClassComponent from "./components/ClassComponent";
+import FunctionalComponent from "./components/FunctionalComponent";
+import CustomButton from "./components/CustomButton";
+import BigComponent from "./components/BigComponent";
+import NavComponent from "./components/NavComponent";
+import MemoComponent from "./components/MemoComponent";
+import ListComponent from "./components/ListComponent";
+import FormComponent from "./components/FormComponent";
 
 function App() {
+  const [num, setNum] = useState<number>(0);
+  const handleClick = () => console.log("click");
+
+  const incrementNum = () => setNum((prevNum) => prevNum + 1);
+
   return (
     <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
+      <h1>Tema 1</h1>
+      <button onClick={incrementNum}>Incrementar: {num}</button>
+      {/* <ClassComponent />
+      <FunctionalComponent />
+      <CustomButton onClick={handleClick} />
+      <BigComponent />
+      <MemoComponent title={`Soy un Memo Component: Número: ${num}`} />
+      <ListComponent /> */}
+      {/* <NavComponent /> */}
+      <FormComponent />
     </div>
   );
 }
