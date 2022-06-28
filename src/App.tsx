@@ -1,18 +1,10 @@
-/* eslint-disable quotes */
-import React, { useState } from "react";
-import "./App.css";
-import Counter from "./components/Counter";
-import { AppContext } from './contexts';
+import React from "react";
+
+// import "./App.css";
+import HomePage from "./views/HomePage/HomePage";
 
 function App() {
-  const [counterValue, setCounterValue] = useState<number>(0);
-  return (
-    <AppContext.Provider value={{ counterValue, setCounterValue }}>
-      <div className="App">
-        <Counter />
-      </div>
-    </AppContext.Provider>
-  );
+  return <HomePage />;
 }
 
 export default App;
