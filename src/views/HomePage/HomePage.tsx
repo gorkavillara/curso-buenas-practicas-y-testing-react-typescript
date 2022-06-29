@@ -5,7 +5,7 @@ import Main from "./components/Main/Main";
 import Footer from "./components/Footer/Footer";
 import { Product } from "../../models";
 import { HomeContext } from "./contexts/HomeContext";
-import { fetchProducts } from "./services";
+import { sampleProducts } from "../../sample_data";
 
 const HomePage = () => {
   const [products, setProducts] = useState<Product[]>([]);
@@ -13,7 +13,7 @@ const HomePage = () => {
 
   useEffect(() => {
     const load = async() => {
-      const data = await fetchProducts().catch((e) => console.error(e));
+      const data = sampleProducts;
       setProducts(data);
     };
     load();

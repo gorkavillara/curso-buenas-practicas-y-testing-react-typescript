@@ -8,7 +8,7 @@ const Dialog = ({
   children: JSX.Element | JSX.Element[];
 }): JSX.Element => {
   return (
-    <div className="dialog">
+    <div role="dialog" className="dialog">
       <div className="dialog-container">{children}</div>
     </div>
   );

@@ -1,0 +1,55 @@
+const pasaPorConsola = (val) => console.log(`El valor es: ${val}`);
+
+// const suma = (a, b, callback) => {
+//   if (typeof a !== "number" || typeof b !== "number")
+//     throw new Error("Los parámetros deberían ser de tipo number");
+//   if (a + b > 5) {
+//     callback(a + b)
+//   }
+//   return a + b;
+// };
+const suma = (a, b) => {
+  if (typeof a !== "number" || typeof b !== "number")
+    throw new Error("Los parámetros deberían ser de tipo number");
+  if (a + b > 5) {
+    pasaPorConsola(a + b)
+  }
+  return a + b;
+};
+
+describe("Funcionando con mocks", () => {
+  it("Primer test con mocks", () => {
+    const mockInicial = jest.fn(pasaPorConsola)
+
+    const res = suma(3, 6)
+
+    expect(mockInicial).toBeCalledTimes(0)
+  })
+}) 
+
+describe("Funcionalidad suma()", () => {
+  // Caso de test 1 (test case 1): Testeamos que suma(2, 3) tiene que dar 5
+  it("Suma correctamente 2 y 3", () => {
+    // const resultado = suma(2, 3);
+    expect(suma(2, 3)).toBe(5);
+  });
+  // Caso de test 2 (test case 2): Testeamos que si le paso un string me dé un error
+  it("Error al pasar un string como valor", () => {
+    expect(() => suma("2", 3)).toThrowError();
+  });
+
+  it("Número es mayor que 7 y menor que 3", () => {
+    const num = 9;
+    expect(num).toBeGreaterThan(7);
+    expect(num).not.toBeLessThan(3);
+  });
+});
+
+describe("Grupo de test cases para aprender", () => {
+  it("Testing de prueba - toBe", () => {
+    expect(4).toBe(4);
+  });
+  it("Testing de prueba - toBeTruthy", () => {
+    expect(4 === 4).toBeTruthy();
+  });
+});
