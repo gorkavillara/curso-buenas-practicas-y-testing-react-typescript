@@ -1,10 +1,19 @@
-# Tema 05 - Arquitectura
+# Tema 07 - Testing End To End
 
-- ¿Existen diferencias entre arquitectura y diseño?
-- Principios SOLID
-- ¿Existe alguna arquitectura mejor que otra para aplicaciones React?
-- Cómo organizar componentes en React
-- Atomic Design
-- Patrones de diseño
-- Introducción al concepto de monorepo
-- Recomendaciones y buenas prácticas
+- Introducción al testing e2e
+- Metodología BDD
+- Sintaxis Gherkin
+- Features, Historias de usuario y escenarios
+- Implementación de escenarios
+- Introducción a Cypress
+- Cómo realizar pruebas con Cypress
+- Selectores y eventos sobre elementos de la vista
+- TSConfig para usar Cypress con Typescript
+- Configuración de Cypress
+- Cypress dashoard
+- Cypress commands
+- Integración con CucumberJS y Gherkin
+- Selenium vs Cypress
+- Creación de pruebas e2e con Cypress
+- Configuraciones
+- Debate sobre la mejor opción en la actualidad

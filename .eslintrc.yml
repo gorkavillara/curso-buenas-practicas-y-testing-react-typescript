@@ -4,6 +4,7 @@ env:
 extends:
   - plugin:react/recommended
   - standard
+  - plugin:cypress/recommended
 parser: '@typescript-eslint/parser'
 parserOptions:
   ecmaFeatures:
@@ -17,5 +18,7 @@ rules: {
   quotes: ["error", "double"],
   semi: ["error", "always"],
   space-before-function-paren: ["error", "never"],
-  multiline-ternary: "never"
+  multiline-ternary: "off",
+  comma-dangle: "off",
+  space-comment: "off"
 }

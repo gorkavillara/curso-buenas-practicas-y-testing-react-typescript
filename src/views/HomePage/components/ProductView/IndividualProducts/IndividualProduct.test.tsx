@@ -1,4 +1,6 @@
-import { fireEvent, prettyDOM, render, screen } from "@testing-library/react";
+/* eslint-disable */
+import { fireEvent, render, screen } from "@testing-library/react";
+import userEvent from "@testing-library/user-event";
 import IndividualProduct from "./IndividualProduct";
 
 const product = {
@@ -10,8 +12,8 @@ const product = {
   image: "",
   rating: {
     rate: 4,
-    count: 3,
-  },
+    count: 3
+  }
 };
 
 let view: any;
@@ -68,5 +70,17 @@ describe("Renderizado del componente", () => {
     // Haz clic en el botón
     fireEvent.click(btn);
     view.getByText("Quitar del carrito");
+  });
+
+  it("Cuando hago hover sobre el título, se añade el estilo line-through", () => {
+    const titleElement = view.container.querySelector(".card-title");
+    userEvent.hover(titleElement);
+    // expect(titleElement).toHaveStyle("background-color: red")
+    expect(titleElement).toHaveStyle("text-decoration: line-through");
+
+    const textDecorationValue = window
+      .getComputedStyle(titleElement, ":hover")
+      .getPropertyValue("text-decoration");
+    // console.log(textDecorationValue)
   });
 });
