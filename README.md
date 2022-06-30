@@ -1,10 +1,12 @@
-# Tema 05 - Arquitectura
+# Tema 06 - Testing Unitario y de Integración
 
-- ¿Existen diferencias entre arquitectura y diseño?
-- Principios SOLID
-- ¿Existe alguna arquitectura mejor que otra para aplicaciones React?
-- Cómo organizar componentes en React
-- Atomic Design
-- Patrones de diseño
-- Introducción al concepto de monorepo
-- Recomendaciones y buenas prácticas
+- Introducción al testing unitario
+- Entendiendo correctamente el concepto de unitario y SUT
+- ¿Qué es el testing de integración?
+- Metodología Test Driven Development (TDD)
+- Introducción a Jest
+- Configuraciones personalizadas de Jest
+- Testing de componentes
+- Particularidades y buenas prácticas en pruebas de componentes de PrimeReact
+- Ejecución de tests
+- Recomendación y buenas prácticas
